@@ -12,7 +12,7 @@ using VRMShaders;
 namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
 {
     /// <summary>
-    /// VRM MaterialDescriptorGenerator for URP EnvironmentDiffuseShader
+    /// VRM MaterialDescriptorGenerator for PolySpatial EnvironmentDiffuseShader
     /// This will be used on VisionOS
     /// </summary>
     public sealed class EnvironmentDiffuseMaterialDescriptorGenerator : IMaterialDescriptorGenerator
