@@ -1,0 +1,54 @@
+{
+  "KHR_materials_unlit": {},
+  "VRMC_materials_mtoon": {
+    "specVersion": "1.0",
+    "transparentWithZWrite": false,
+    "renderQueueOffsetNumber": 0,
+    "shadeColorFactor": [
+      0.9331069,
+      0.620915949,
+      0.71056664
+    ],
+    "shadeMultiplyTexture": {
+      "extensions": {
+        "KHR_texture_transform": {
+          "offset": [
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1
+          ]
+        }
+      },
+      "index": 1
+    },
+    "shadingShiftFactor": 0.9,
+    "shadingToonyFactor": 0.9,
+    "giEqualizationFactor": 0.9,
+    "matcapFactor": [
+      0,
+      0,
+      0
+    ],
+    "parametricRimColorFactor": [
+      0,
+      0,
+      0
+    ],
+    "rimLightingMixFactor": 1,
+    "parametricRimFresnelPowerFactor": 1,
+    "parametricRimLiftFactor": 0,
+    "outlineWidthMode": "none",
+    "outlineColorFactor": [
+      0.0304218456,
+      0.00288735447,
+      0.000870408257
+    ],
+    "outlineLightingMixFactor": 0,
+    "uvAnimationScrollXSpeedFactor": 0,
+    "uvAnimationScrollYSpeedFactor": 0,
+    "uvAnimationRotationSpeedFactor": 0
+  }
+}

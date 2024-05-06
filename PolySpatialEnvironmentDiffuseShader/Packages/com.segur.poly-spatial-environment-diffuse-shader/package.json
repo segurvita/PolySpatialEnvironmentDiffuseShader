@@ -1,0 +1,33 @@
+{
+  "name": "com.segur.poly-spatial-environment-diffuse-shader",
+  "version": "0.1.0",
+  "displayName": "PolySpatial Environment Diffuse Shader",
+  "description": "This shader reflects the diffuse light of the environment, captured by the external cameras of Apple Vision Pro, onto the surface.",
+  "unity": "2022.3",
+  "unityRelease": "18f1",
+  "dependencies": {
+    "com.unity.polyspatial": "1.1.6"
+  },
+  "keywords": [
+    "ShaderGraph",
+    "VisionOS",
+    "VRM"
+  ],
+  "author": {
+    "name": "segur",
+    "email": "segur.opus@gmail.com",
+    "url": "https://github.com/segurvita"
+  },
+  "samples": [
+    {
+      "displayName": "Primitive Preview",
+      "description": "A sample scene to preview primitive models",
+      "path": "Samples~/PrimitivePreview"
+    },
+    {
+      "displayName": "VRM Loader Demo",
+      "description": "A sample scene to load VRM file",
+      "path": "Samples~/VrmLoaderDemo"
+    }
+  ]
+}
