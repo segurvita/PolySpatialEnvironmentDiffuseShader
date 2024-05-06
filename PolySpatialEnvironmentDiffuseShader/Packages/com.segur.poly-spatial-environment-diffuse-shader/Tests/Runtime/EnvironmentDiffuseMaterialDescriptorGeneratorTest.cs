@@ -30,7 +30,11 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Tests.Runtime
             Assert.That(materialDescriptor.TextureSlots.ContainsKey("_BaseMap"), Is.True);
             Assert.That(materialDescriptor.TextureSlots.ContainsKey("_EmissionMap"), Is.True);
 
-            Assert.That(materialDescriptor.FloatValues.Count, Is.EqualTo(0));
+            Assert.That(materialDescriptor.FloatValues.Count, Is.GreaterThan(4));
+            Assert.That(materialDescriptor.FloatValues["_AlphaMode"], Is.EqualTo(0));
+            Assert.That(materialDescriptor.FloatValues["_TransparentWithZWrite"], Is.EqualTo(0));
+            Assert.That(materialDescriptor.FloatValues["_Cutoff"], Is.EqualTo(0.5f));
+            Assert.That(materialDescriptor.FloatValues["_DoubleSided"], Is.EqualTo(0));
 
             Assert.That(materialDescriptor.Colors.Count, Is.EqualTo(2));
             Assert.That(materialDescriptor.Colors.ContainsKey("_Color"), Is.False);

@@ -12,14 +12,14 @@ using VRMShaders;
 namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
 {
     /// <summary>
-    /// VRM MaterialDescriptorGenerator for URP EnvironmentDiffuseShader
+    /// VRM MaterialDescriptorGenerator for PolySpatial EnvironmentDiffuseShader
     /// This will be used on VisionOS
     /// </summary>
     public sealed class EnvironmentDiffuseMaterialDescriptorGenerator : IMaterialDescriptorGenerator
     {
         public const string ShaderName = "Segur/PolySpatial/EnvironmentDiffuse";
 
-        private static readonly Shader TargetShader = Shader.Find(ShaderName);
+        public static readonly Shader TargetShader = Shader.Find(ShaderName);
 
         public MaterialDescriptor Get(GltfData data, int i)
         {
@@ -64,10 +64,13 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
                 TargetShader,
                 null,
                 ReplaceTextureSlots(inputMaterialDescriptor.TextureSlots),
-                new Dictionary<string, float>(),
+                inputMaterialDescriptor.FloatValues,
                 ReplaceColors(inputMaterialDescriptor.Colors),
-                new Dictionary<string, Vector4>(),
-                new Action<Material>[] { });
+                inputMaterialDescriptor.Vectors,
+                new Action<Material>[]
+                {
+                    material => { new EnvironmentDiffuseMaterialParameterAdjuster(material).Validate(); }
+                });
 
             return outputMaterialDescriptor;
         }
