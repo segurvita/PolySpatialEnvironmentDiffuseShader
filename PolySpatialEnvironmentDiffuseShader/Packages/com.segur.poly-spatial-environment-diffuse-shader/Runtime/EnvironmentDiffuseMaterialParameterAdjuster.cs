@@ -32,6 +32,15 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
             _material = material;
         }
 
+        private static bool UsePolySpatial()
+        {
+#if USE_POLYSPATIAL
+            return true;
+#else
+            return false;
+#endif
+        }
+
         public void Validate()
         {
             SetAlphaSettings();
@@ -39,6 +48,14 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
 
             // Refresh material
             _material.shader = EnvironmentDiffuseMaterialDescriptorGenerator.TargetShader;
+            
+            // Change keyword after refresh
+            SetUsePolySpatial();
+        }
+
+        private void SetUsePolySpatial()
+        {
+            _material.SetKeyword("_USE_POLYSPATIAL", UsePolySpatial());
         }
 
         private void SetAlphaSettings()

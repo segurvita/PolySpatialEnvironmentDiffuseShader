@@ -29,6 +29,11 @@
             "name": "com.vrmc.vrmshaders",
             "expression": "",
             "define": "COM_VRMC_VRMSHADERS"
+        },
+        {
+            "name": "com.unity.polyspatial",
+            "expression": "",
+            "define": "USE_POLYSPATIAL"
         }
     ],
     "noEngineReferences": false
