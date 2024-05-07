@@ -5,9 +5,7 @@
   "description": "This shader reflects the diffuse light of the environment, captured by the external cameras of Apple Vision Pro, onto the surface.",
   "unity": "2022.3",
   "unityRelease": "18f1",
-  "dependencies": {
-    "com.unity.polyspatial": "1.1.6"
-  },
+  "dependencies": {},
   "keywords": [
     "ShaderGraph",
     "VisionOS",
