@@ -82,7 +82,7 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
                     _material.SetInt(ZWrite, (int)UnityZWriteMode.Off);
                     _material.SetInt(AlphaToMask, (int)UnityAlphaToMaskMode.Off);
                     _material.SetInt(Surface, 1); // Set to Transparent
-                    _material.SetInt(AlphaClip, 0); // Disable Alpha Clipping
+                    _material.SetInt(AlphaClip, 1); // Enable Alpha Clipping
 
                     renderQueueOffset = Mathf.Clamp(renderQueueOffset, -9, 0);
                     _material.renderQueue = (int)RenderQueue.Transparent + renderQueueOffset;
@@ -94,7 +94,7 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
                     _material.SetInt(ZWrite, (int)UnityZWriteMode.On);
                     _material.SetInt(AlphaToMask, (int)UnityAlphaToMaskMode.Off);
                     _material.SetInt(Surface, 1); // Set to Transparent
-                    _material.SetInt(AlphaClip, 0); // Disable Alpha Clipping
+                    _material.SetInt(AlphaClip, 1); // Enable Alpha Clipping
 
                     renderQueueOffset = Mathf.Clamp(renderQueueOffset, 0, +9);
                     _material.renderQueue = (int)RenderQueue.GeometryLast + 1 + renderQueueOffset;
