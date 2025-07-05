@@ -1,9 +1,9 @@
-#if COM_VRMC_GLTF && COM_VRMC_VRM && COM_VRMC_VRMSHADERS
+#if COM_VRMC_GLTF && COM_VRMC_VRM
 
 using System;
 using UnityEngine;
 using UnityEngine.Rendering;
-using VRMShaders.VRM10.MToon10.Runtime;
+using VRM10.MToon10;
 
 // This code is based on Packages/com.vrmc.vrmshaders/VRM10/MToon10/Runtime/MToonValidator.cs
 // ReSharper disable once CheckNamespace
