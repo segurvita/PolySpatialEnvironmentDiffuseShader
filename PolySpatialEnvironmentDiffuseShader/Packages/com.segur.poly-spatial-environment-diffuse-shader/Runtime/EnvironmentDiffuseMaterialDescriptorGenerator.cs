@@ -1,11 +1,10 @@
-#if COM_VRMC_GLTF && COM_VRMC_VRM && COM_VRMC_VRMSHADERS
+#if COM_VRMC_GLTF && COM_VRMC_VRM
 
 using System;
 using System.Collections.Generic;
 using UniGLTF;
 using UnityEngine;
 using UniVRM10;
-using VRMShaders;
 
 // This code is based on Packages/com.vrmc.vrm/Runtime/IO/Material/URP/Import/UrpVrm10MaterialDescriptorGenerator.cs:
 // ReSharper disable once CheckNamespace
@@ -37,7 +36,8 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
             }
 
             // pbr
-            if (UrpGltfPbrMaterialImporter.TryCreateParam(data, i, out matDesc))
+            var pbrImporter = new UrpGltfPbrMaterialImporter();
+            if (pbrImporter.TryCreateParam(data, i, out matDesc))
             {
                 return matDesc;
             }
@@ -47,9 +47,10 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
             return GenerateUrpGltfPbrMaterialDescriptor(i);
         }
 
-        public MaterialDescriptor GetGltfDefault()
+        public MaterialDescriptor GetGltfDefault(string materialName = null)
         {
-            return UrpGltfDefaultMaterialImporter.CreateParam();
+            var defaultImporter = new UrpGltfDefaultMaterialImporter();
+            return defaultImporter.CreateParam(materialName);
         }
 
         /// <summary>
@@ -132,9 +133,10 @@ namespace Segur.PolySpatialEnvironmentDiffuseShader.Runtime
 
         private static MaterialDescriptor GenerateUrpGltfPbrMaterialDescriptor(int i)
         {
+            var pbrImporter = new UrpGltfPbrMaterialImporter();
             return new MaterialDescriptor(
                 GltfMaterialImportUtils.ImportMaterialName(i, null),
-                UrpGltfPbrMaterialImporter.Shader,
+                pbrImporter.Shader,
                 null,
                 new Dictionary<string, TextureDescriptor>(),
                 new Dictionary<string, float>(),

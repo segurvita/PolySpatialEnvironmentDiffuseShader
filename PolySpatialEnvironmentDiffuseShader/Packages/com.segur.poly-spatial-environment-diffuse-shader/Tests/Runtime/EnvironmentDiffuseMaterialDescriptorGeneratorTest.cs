@@ -1,4 +1,4 @@
-#if COM_VRMC_GLTF && COM_VRMC_VRMSHADERS
+#if COM_VRMC_GLTF
 
 using Segur.PolySpatialEnvironmentDiffuseShader.Runtime;
 using NUnit.Framework;

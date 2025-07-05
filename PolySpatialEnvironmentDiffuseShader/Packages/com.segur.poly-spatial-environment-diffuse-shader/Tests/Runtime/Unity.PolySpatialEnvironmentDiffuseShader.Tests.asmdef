@@ -5,8 +5,7 @@
         "GUID:27619889b8ba8c24980f49ee34dbb44a",
         "GUID:0acc523941302664db1f4e527237feb3",
         "GUID:ae1ed9833eed94112878256fe51f90b4",
-        "GUID:8d76e605759c3f64a957d63ef96ada7c",
-        "GUID:da3e51d19d51a544fa14d43fee843098"
+        "GUID:8d76e605759c3f64a957d63ef96ada7c"
     ],
     "includePlatforms": [
         "Editor"
@@ -26,11 +25,6 @@
             "name": "com.vrmc.gltf",
             "expression": "",
             "define": "COM_VRMC_GLTF"
-        },
-        {
-            "name": "com.vrmc.vrmshaders",
-            "expression": "",
-            "define": "COM_VRMC_VRMSHADERS"
         }
     ],
     "noEngineReferences": false
