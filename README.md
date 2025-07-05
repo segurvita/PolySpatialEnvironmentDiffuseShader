@@ -74,7 +74,6 @@ This is a sample scene that loads a VRM file.
 - Install following packages:
   - `com.vrmc.gltf`
   - `com.vrmc.vrm`
-  - `com.vrmc.vrmshaders`
 - Specify the URL of your preferred VRM file in the `Url` field of the `VrmLoader` within the scene.
 - Run the scene, then the VRM will be displayed with this shader applied.
 
