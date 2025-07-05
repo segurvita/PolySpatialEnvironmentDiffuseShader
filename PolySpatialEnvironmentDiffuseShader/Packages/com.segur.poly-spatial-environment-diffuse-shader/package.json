@@ -1,6 +1,6 @@
 {
   "name": "com.segur.poly-spatial-environment-diffuse-shader",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "displayName": "PolySpatial Environment Diffuse Shader",
   "description": "This shader reflects the diffuse light of the environment, captured by the external cameras of Apple Vision Pro, onto the surface.",
   "unity": "2022.3",
