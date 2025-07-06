@@ -16,17 +16,17 @@
     "versionDefines": [
         {
             "name": "com.vrmc.gltf",
-            "expression": "",
+            "expression": "0.125.0",
             "define": "COM_VRMC_GLTF"
         },
         {
             "name": "com.vrmc.vrm",
-            "expression": "",
+            "expression": "0.125.0",
             "define": "COM_VRMC_VRM"
         },
         {
             "name": "com.unity.polyspatial",
-            "expression": "",
+            "expression": "0.125.0",
             "define": "USE_POLYSPATIAL"
         }
     ],
